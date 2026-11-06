@@ -1,0 +1,23 @@
+[Unit]
+Description=Lex lex demo
+After=network.target
+
+[Service]
+Type=simple
+User=opc
+Group=opc
+WorkingDirectory=/srv/lex
+Environment=LEX_BASE=/lex/
+ExecStart=/usr/bin/php -S 127.0.0.1:8101 -t showroom showroom/index.php
+Restart=on-failure
+RestartSec=2
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/lex
+MemoryDenyWriteExecute=false
+
+[Install]
+WantedBy=multi-user.target
