@@ -2,19 +2,19 @@
 
 ## What the project is
 
-LEX is the legal system of the InFolk Community. It runs mediation and arbitration over a distributed network.
+LEX is an online Alternative Dispute Resolution environment and system. It settles disputes between a claimant and a respondent, and anyone can bring a claim. A panel meets both sides and looks for terms, and if that fails, the same panel hears the case and decides. When a case closes, LEX records the ruling and the day. LEX stands on its own. It belongs to no community, no organisation and no single country.
 
-The project models a claim through five steps:
+A claim names the claimant, the respondent, the subject in one line and the day of filing. LEX assigns a panel with an odd number of seats. The panel meets both sides and looks for terms. If that fails, the same panel hears the case and decides. At closure, LEX records the ruling and the day.
+
+A case passes five steps:
 
 Filed
-Assigned to a panel
+Panel
 Mediated
 Arbitrated
 Closed
 
-Each claim names a claimant, a respondent, a subject in one line and the day it was filed. A panel holds an odd number of seats so a vote settles the matter.
-
-When a case closes, LEX records the ruling and the day. The court holds a bond that the parties put up and keeps a fee of one part in thirty two when the case closes.
+Each party puts up a bond. When a case closes, the court keeps one part in thirty two as its fee and returns the rest.
 
 The repository contains a plain PHP 8.2 implementation. It requires no Composer and uses no packages.
 

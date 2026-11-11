@@ -1,6 +1,6 @@
 ## Roadmap
 
-The project holds a claim register with three matters, the five steps a case takes, a panel that keeps an odd number of seats and a bond that splits into a fee and a refund at closure. The hand-written runner carries 17 checks.
+The project holds a claim register with three matters, a panel with an odd number of seats, the five steps from filing to closure and a bond that splits into the court fee and a refund. LEX serves anyone who brings a claim.
 
 1. Extend the sample register beyond its three matters so contributors can examine more claim records and their rulings.
 2. Add clear validation for claimants, respondents, subjects and filing days so each claim follows the required record structure.

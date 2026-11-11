@@ -1,5 +1,5 @@
 [Unit]
-Description=Lex lex demo
+Description=LEX dispute register
 After=network.target
 
 [Service]

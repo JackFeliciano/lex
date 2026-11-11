@@ -59,11 +59,11 @@ HTML;
     public function front(Sample $sample, string $today): string
     {
         $TITLE = 'LEX';
-        $LEDE = 'LEX runs mediation and arbitration across a distributed network. It serves as the legal system of the InFolk Community.';
+        $LEDE = 'LEX is an online system that settles disputes between a claimant and a respondent, and anyone can bring a claim.';
         $out = $this->header($TITLE);
         $out .= '<h1>' . $TITLE . '</h1>' . "\n";
         $out .= '<p class="lede">' . $this->h($LEDE) . '</p>' . "\n";
-        $out .= '<p>' . $this->h('Visitors can explore how LEX handles a claim from filing to closure. Each claim records the claimant, respondent, subject and filing day. A panel holds an odd number of seats so its vote settles the matter. The process follows five steps, from filing through assignment, mediation and arbitration to closure. When a case closes, LEX records its ruling and the day. The court also holds a bond from the parties and keeps one part in thirty two as its fee.') . '</p>' . "\n";
+        $out .= '<p>' . $this->h('A claim names the claimant, the respondent, the subject in one line and the day of filing. LEX assigns a panel with an odd number of seats. The panel meets both sides and looks for terms. If that fails, the same panel hears the case and decides. At closure, LEX records the ruling and the day.') . '</p>' . "\n";
         $out .= '<p class="stage">Matters open: ' . $sample->count() . '. Court fee on the sample bond: ' . $this->money($sample->fee()) . '.</p>' . "\n";
         $out .= '<h2>The register</h2>' . "\n";
         $out .= '<div class="cards">' . "\n";
@@ -87,11 +87,11 @@ HTML;
         $out .= '<h2>The steps a case takes</h2>' . "\n";
         $out .= '<table class="tiers"><thead><tr><th>Step</th><th>What has to happen</th></tr></thead><tbody>' . "\n";
         $steps = [
-            ['Filed', 'A claimant names a respondent, states the subject in one line and puts up a bond.'],
-            ['Panel', 'The court assigns a panel. A panel holds an odd number of seats so a vote settles.'],
-            ['Mediated', 'The panel meets both sides and looks for terms.'],
-            ['Arbitrated', 'The panel that failed to settle the case hears it and decides.'],
-            ['Closed', 'The ruling enters the record with the day it closed and the bond settles.'],
+            ['Filed', 'The claimant files a claim that names both sides, the subject in one line and the day of filing.'],
+            ['Panel', 'LEX assigns the case to a panel with an odd number of seats, and the panel meets both sides to look for terms.'],
+            ['Mediated', 'The panel looks for terms both sides accept.'],
+            ['Arbitrated', 'The same panel hears the case and decides by vote.'],
+            ['Closed', 'LEX records the ruling and the day the case closes.'],
         ];
         foreach ($steps as [$step, $line]) {
             $out .= '<tr><td><strong>' . $this->h($step) . '</strong></td><td>' . $this->h($line) . '</td></tr>' . "\n";
